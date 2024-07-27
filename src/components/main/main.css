@@ -1,0 +1,19 @@
+.div-all-itens-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-itens-product {
+    padding: 2rem;
+}
+
+.product-price-quantity {
+    display: flex;
+    justify-content: space-between;
+}
+
+#productQuantity {
+    border-radius: 10px;
+    padding: 3px;
+}
