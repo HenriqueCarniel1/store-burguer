@@ -28,14 +28,14 @@ function Main() {
     const { searchTerm } = useContext(SearchContext);
 
     useEffect(() => {
-        axios.get('https://api-bigburguer.onrender.com/get/all/products')
+        axios.get('https://api-bigburguer-y35l.onrender.com/get/all/products')
             .then((response) => {
                 setDataProducts(response.data);
             })
     }, [])
 
     useEffect(() => {
-        axios.get('https://api-bigburguer.onrender.com/get/all/products')
+        axios.get('https://api-bigburguer-y35l.onrender.com/get/all/products')
             .then((response) => {
                 let results = response.data.filter((item: { nome: string; }) =>
                     item.nome.toLowerCase().includes(searchTerm.toLowerCase())
