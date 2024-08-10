@@ -27,7 +27,7 @@ function Cart() {
 
     useEffect(() => {
         if (saveIdUsuario) {
-            axios.get(`https://api-bigburguer.onrender.com/get/cart/product/${saveIdUsuario}`)
+            axios.get(`https://api-bigburguer-y35l.onrender.com/get/cart/product/${saveIdUsuario}`)
                 .then((response) => {
                     setCartData(response.data.products);
                     setTotalPrice(response.data.total_preco);
@@ -49,7 +49,7 @@ function Cart() {
     const handleDeleteProductCart = async (idproduto: number): Promise<void> => {
         setIsLoading(idproduto);
         try {
-            await axios.delete(`https://api-bigburguer.onrender.com/delete/product/${idproduto}/${saveIdUsuario}`, config);
+            await axios.delete(`https://api-bigburguer-y35l.onrender.com/delete/product/${idproduto}/${saveIdUsuario}`, config);
             const updatedCartData = saveCartData.filter(item => item.idproduto !== idproduto);
             const updatedTotalPrice = updatedCartData.reduce((acc, item) => acc - item.preco, 0);
             setCartData(updatedCartData);
