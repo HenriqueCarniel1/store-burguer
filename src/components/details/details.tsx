@@ -37,7 +37,7 @@ function DetailsHamburguer() {
     useEffect(() => {
         const fetchProductData = async () => {
             try {
-                const response = await axios.get(`https://api-bigburguer.onrender.com/get/detailproduct/${idproduto}`);
+                const response = await axios.get(`https://api-bigburguer-y35l.onrender.com/get/detailproduct/${idproduto}`);
                 setDataHamburguer(response.data);
             } catch (error) {
                 console.error(error);
@@ -78,7 +78,7 @@ function DetailsHamburguer() {
 
         setLoading(true);
         try {
-            const response = await axios.get(`https://api-bigburguer.onrender.com/add/cart/product/${idproduto}/${saveIdUsuario}`, config);
+            const response = await axios.get(`https://api-bigburguer-y35l.onrender.com/add/cart/product/${idproduto}/${saveIdUsuario}`, config);
             if (response.status === 200) {
                 toast.success('Produto adicionado no carrinho com sucesso', {
                     position: "top-right",
