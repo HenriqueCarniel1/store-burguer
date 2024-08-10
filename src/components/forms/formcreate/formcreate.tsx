@@ -47,7 +47,7 @@ function FormCreateAccount() {
             if (response.data.userEmailAlredyExist) {
                 setMsgRegister(response.data.userEmailAlredyExist);
             } else {
-                navigation('/');
+                navigation('/login');
             }
 
         } catch (err: unknown) {
